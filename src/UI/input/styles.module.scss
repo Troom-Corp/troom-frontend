@@ -1,16 +1,16 @@
 .input {
   padding: 15px 25px;
-  background-color: $input-background;
-  color: $main-font;
-  border: 1px solid $input-color;
+  background-color: $color-background;
+  color: $color-font;
+  border: 1px solid $color-grey;
   border-radius: 20px;
 
   &__success {
-    border: 1px solid $input-success;
+    border: 1px solid $color-success;
   }
 
   &__error {
-    border: 1px solid $input-error;
+    border: 1px solid $color-error;
   }
 }
 

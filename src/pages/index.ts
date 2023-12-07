@@ -1,4 +1,4 @@
-export * from './root'
-export * from './home'
-export * from './signin'
-export * from './signup'
+export { HomePage } from './home'
+export { RootPage } from './root'
+export { SignInPage } from './signin'
+export { SignUpPage } from './signup'
