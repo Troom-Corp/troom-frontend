@@ -1,0 +1,25 @@
+.input {
+  padding: 15px 25px;
+  background-color: $input-background;
+  color: $main-font;
+  border: 1px solid $input-color;
+  border-radius: 20px;
+
+  &__success {
+    border: 1px solid $input-success;
+  }
+
+  &__error {
+    border: 1px solid $input-error;
+  }
+}
+
+.submit {
+  @extend .input;
+  margin: 4px 0 16px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
