@@ -2,9 +2,9 @@
 
 import type { Metadata } from 'next'
 import { Providers } from './providers'
-
 import { Nunito } from 'next/font/google'
-import '@/styles/global/_globals.scss'
+
+import './styles/index.scss'
 
 const nunito = Nunito({
   subsets: ['cyrillic'],

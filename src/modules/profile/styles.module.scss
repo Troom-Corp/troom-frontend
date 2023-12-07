@@ -1,0 +1,10 @@
+@use '@styles' as *;
+
+.profile {
+  @include default;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}

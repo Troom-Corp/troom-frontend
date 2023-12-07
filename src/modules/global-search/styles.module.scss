@@ -1,0 +1,21 @@
+@use '@styles' as *;
+
+.search {
+  position: relative;
+
+  svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+}
+
+.input {
+  position: relative;
+  background: $main-background;
+  padding: 13px 20px;
+  border-radius: 20px;
+  width: 300px;
+}

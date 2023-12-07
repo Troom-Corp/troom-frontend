@@ -1,5 +1,6 @@
-import { $search } from '@/shared/api'
 import { AxiosResponse } from 'axios'
+
+import { $search } from '@/api'
 import { IUser } from '@/types'
 
 export class UserService {

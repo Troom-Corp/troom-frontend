@@ -1,6 +1,7 @@
-import { IUser } from '@/types'
-import { $auth } from '@/shared/api'
 import { AxiosResponse } from 'axios'
+
+import { IUser } from '@/types'
+import { $auth } from '@/api'
 
 export class AuthService {
   static async signIn(login: string, password: string): Promise<AxiosResponse<void>> {

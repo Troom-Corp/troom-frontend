@@ -1,0 +1,21 @@
+@use '@styles' as *;
+
+//!== Этот стиль не нужен ==!
+.mockup {
+  background-color: $main-color;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+//!== Этот стиль не нужен ==!
+
+.header {
+  background: white;
+}
+
+.content {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

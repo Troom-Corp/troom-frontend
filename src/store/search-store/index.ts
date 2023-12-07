@@ -1,7 +1,8 @@
+import { makeAutoObservable } from 'mobx'
+
 import { useDebounce } from '@/hooks'
 import { UserService } from '@/services'
 import { IUser } from '@/types'
-import { makeAutoObservable } from 'mobx'
 
 export class SearchStore {
   query: string = ''

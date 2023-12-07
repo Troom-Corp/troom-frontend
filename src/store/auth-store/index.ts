@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx'
-import IUser from '../types/IUser'
-import IAuth from '../types/IAuth'
-import AuthService from '../services/auth-service'
+
+import { IUser, IAuth } from '@/types'
+import { AuthService } from '@/services'
 
 
 export class AuthStore {
