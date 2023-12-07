@@ -1,0 +1,19 @@
+@use '@styles' as *;
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer_left {
+  display: flex;
+  gap: 15px;
+}
+
+.footer_btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

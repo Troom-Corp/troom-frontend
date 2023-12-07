@@ -3,7 +3,7 @@
 import { useContext } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { Context } from '@/app/providers'
+import { Context } from '../../../app/providers'
 import { SearchModal } from '../search-modal'
 import { Svg } from '@/UI'
 

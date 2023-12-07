@@ -1,4 +1,4 @@
-import { Context } from '@/app/providers'
+import { Context } from '../../../app/providers'
 import { useContext, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'

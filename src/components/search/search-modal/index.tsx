@@ -1,8 +1,10 @@
+'use client'
+
 import { useContext, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Context } from '@/app/providers'
+import { Context } from '../../../app/providers'
 import { IUser } from '@/types'
 
 import s from './styles.module.scss'

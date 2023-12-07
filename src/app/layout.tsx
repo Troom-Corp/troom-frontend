@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { Providers } from './providers'
 import { Nunito } from 'next/font/google'
 
-import './styles/index.scss'
+import './styles/globals.scss'
 
 const nunito = Nunito({
   subsets: ['cyrillic'],
@@ -12,7 +12,7 @@ const nunito = Nunito({
   display: 'swap'
 })
 
-export const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="ru" className={nunito.variable}>
       <body>
@@ -23,3 +23,5 @@ export const RootLayout = ({ children }: { children: React.ReactNode }) => {
     </html>
   )
 }
+
+export default RootLayout

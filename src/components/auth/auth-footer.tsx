@@ -1,7 +1,9 @@
+'use client'
+
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-import s from '../styles.module.scss'
+import s from './styles.module.scss'
 
 export const AuthFooter = () => {
   const path = usePathname()

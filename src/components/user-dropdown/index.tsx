@@ -2,11 +2,11 @@
 
 import { useContext, useState } from 'react'
 import { Svg } from '@/UI'
-import { Context } from '@/app/providers'
+import { Context } from '../../app/providers'
 import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
 
-import styles from '@/styles/Header.module.scss'
+import s from './styles.module.scss'
 
 export const UserDropDown: React.FC = observer(() => {
   const [showMenu, setShowMenu] = useState(false)
@@ -15,14 +15,14 @@ export const UserDropDown: React.FC = observer(() => {
   const user = authStore.user
 
   return (
-    <div className={styles.user}>
+    <div className={s.user}>
       {!authStore.isAuth ?
         <p>Загрузка...</p>
         :
         <>
           <Image src={'/ava.jpg'} alt='' width={50} height={50} />
           <div
-            className={styles.name}
+            className={s.name}
             onClick={() => { setShowMenu(!showMenu) }}
           >
             <p>{`${user.firstName} ${user.lastName}`}</p>
@@ -30,19 +30,19 @@ export const UserDropDown: React.FC = observer(() => {
           </div>
         </>
       }
-      <div className={`${styles.menu} ${showMenu ? styles.show : ''}`}>
-        <div className={styles.userCard}></div>
-        <ul className={styles.list}>
-          <div className={styles.item}>
+      <div className={`${s.menu} ${showMenu ? s.show : ''}`}>
+        <div className={s.userCard}></div>
+        <ul className={s.list}>
+          <div className={s.item}>
             <li>✪ Настройки</li>
           </div>
-          <div className={styles.item}>
+          <div className={s.item}>
             <li>✪ Тема</li>
           </div>
-          <div className={styles.item}>
+          <div className={s.item}>
             <li>✪ Сообщить о проблеме</li>
           </div>
-          <div onClick={() => authStore.signOut()} className={styles.item}>
+          <div onClick={() => authStore.signOut()} className={s.item}>
             <li>✪ Выйти</li>
           </div>
         </ul>

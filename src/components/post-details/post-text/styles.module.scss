@@ -1,0 +1,32 @@
+@use '@styles' as *;
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.more {
+  text-align: right;
+  color: $color-main;
+}
+
+.hide {
+  max-height: 120px;
+  color: transparent;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, .3));
+  background-clip: text;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin: 20px 0 40px;
+}

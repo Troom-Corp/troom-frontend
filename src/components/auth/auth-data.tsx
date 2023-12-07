@@ -5,10 +5,10 @@ import { observer } from 'mobx-react-lite'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
-import { Context } from '@/app/providers'
+import { Context } from '../../app/providers'
 import { UiInput } from '@/UI'
 
-import s from '../styles.module.scss'
+import s from './styles.module.scss'
 
 interface AuthDataProps {
   type: string

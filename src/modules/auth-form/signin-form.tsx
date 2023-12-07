@@ -1,8 +1,6 @@
 import { AuthData, AuthFooter } from '@/components/auth'
 
-import s from '../styles.module.scss'
-
-
+import s from './styles.module.scss'
 
 export const SignInForm = () => {
   return (
@@ -10,7 +8,7 @@ export const SignInForm = () => {
       <div>
         <h1>Войдите в аккаунт</h1>
       </div>
-      <div className={s.input__container}>
+      <div className={s.wrapper}>
         <AuthData type='signin' />
       </div>
       <AuthFooter />

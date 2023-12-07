@@ -1,4 +1,4 @@
-@import './global/variables';
+@use '@styles' as *;
 
 .post {
   @include default;
@@ -45,7 +45,7 @@
 
 .more {
   text-align: right;
-  color: $main-color;
+  color: $color-main;
 }
 
 .hide {

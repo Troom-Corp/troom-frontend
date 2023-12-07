@@ -1,11 +1,13 @@
+'use client'
+
 import { useState } from 'react'
 import Image from 'next/image'
 
 import postImage from '@/assets/mock.png'
-import { PostFooter } from './post-footer'
-import { PostText } from './post-text'
+import { PostFooter } from '@/components'
+import { PostText } from '@/components'
 
-import s from '../styles.module.scss'
+import s from './styles.module.scss'
 
 
 
