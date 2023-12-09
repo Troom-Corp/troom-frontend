@@ -1,0 +1,15 @@
+@use '@styles' as *;
+
+.post {
+  @include default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin: 20px 0 40px;
+}

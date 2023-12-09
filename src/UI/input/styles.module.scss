@@ -1,16 +1,18 @@
+@use '@styles' as *;
+
 .input {
   padding: 15px 25px;
-  background-color: $color-background;
-  color: $color-font;
-  border: 1px solid $color-grey;
+  background-color: var(--color-background);
+  color: var(--color-font);
+  border: 1px solid var(--color-grey);
   border-radius: 20px;
 
   &__success {
-    border: 1px solid $color-success;
+    border: 1px solid var(--color-success);
   }
 
   &__error {
-    border: 1px solid $color-error;
+    border: 1px solid var(--color-error);
   }
 }
 

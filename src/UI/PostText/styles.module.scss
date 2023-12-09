@@ -1,0 +1,25 @@
+@use '@styles' as *;
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.more {
+  text-align: right;
+  color: var(--main-color)
+}
+
+.hide {
+  max-height: 120px;
+  color: transparent;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, .3));
+  background-clip: text;
+}

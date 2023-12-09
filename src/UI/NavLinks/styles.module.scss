@@ -1,0 +1,57 @@
+@use '@styles' as *;
+
+.links {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  font-weight: 400;
+  color: #a0a0a0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &.active {
+    font-weight: 700;
+    color: var(--color-main);
+
+    path,
+    rect {
+      stroke: var(--color-main);
+      stroke-width: 2.3;
+    }
+  }
+
+  &:before {
+    display: block;
+    font-weight: 700;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+.notifications {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  border: 1px solid #FFF;
+  z-index: 1;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+}

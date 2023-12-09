@@ -1,5 +1,4 @@
-
-import s from '@/styles.module.scss'
+import s from './styles.module.scss'
 
 export const Filter = () => {
   return (

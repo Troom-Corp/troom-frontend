@@ -1,0 +1,10 @@
+@use '@styles' as *;
+
+
+.nav {
+  max-width: 100%;
+  grid-area: nav;
+  align-self: start;
+  background: #fff;
+  border-radius: 20px;
+}

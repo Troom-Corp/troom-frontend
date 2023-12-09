@@ -1,2 +1,9 @@
-export * from './auth-store'
-export * from './search-store'
+import authStore from './AuthStore'
+import searchStore from './SearchStore'
+import uiStore from './UiStore'
+
+export {
+  authStore,
+  searchStore,
+  uiStore
+}

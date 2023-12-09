@@ -1,0 +1,49 @@
+@use '@styles' as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid var(--color-background);
+  padding: 30px;
+  background-color: white;
+  width: 250px;
+  position: absolute;
+  top: 80px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .1);
+}
+
+.element {
+  padding-block: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border-bottom: 1px solid var(--color-background);
+
+  img {
+    border-radius: 15px;
+  }
+
+  &:hover {
+    background: var(--color-background);
+  }
+}
+
+.job {
+  font-size: 14px;
+  color: var(--color-grey);
+}
+
+.all {
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--color-main);
+
+  &:hover {
+    background: var(--color-background);
+  }
+
+}
