@@ -1,8 +1,15 @@
+'use client'
+
+import { observer } from 'mobx-react-lite'
+
 import { AuthData, AuthFooter } from '@/UI'
+import { useAuth } from '@/hooks'
 
 import s from './styles.module.scss'
 
-export const SignInForm = () => {
+export const SignInForm = observer(() => {
+  useAuth('/home', 'auth')
+
   return (
     <form className={s.form}>
       <div>
@@ -14,4 +21,4 @@ export const SignInForm = () => {
       <AuthFooter />
     </form>
   )
-}
+})

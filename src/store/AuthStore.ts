@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx'
 
 import { IUser, IAuth } from '@/types'
-import { AuthService } from '@/services'
+import { AuthService, UserService } from '@/services'
 
 
 class AuthStore {
@@ -54,6 +54,18 @@ class AuthStore {
 
   setSubmit(value: boolean) {
     this.submit = value
+  }
+
+  async getProfileByLogin(login: string) {
+    this.setLoading(true)
+    try {
+      const response = await UserService.getUserByLogin(login)
+    } catch (e) {
+      console.log(e)
+    }
+    finally {
+      this.setLoading(false)
+    }
   }
 
   async getProfile() {

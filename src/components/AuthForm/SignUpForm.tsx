@@ -4,10 +4,13 @@ import { observer } from 'mobx-react-lite'
 
 import { AuthData, AuthFooter } from '@/UI'
 import authStore from '@/store/AuthStore'
+import { useAuth } from '@/hooks'
 
 import s from './styles.module.scss'
 
 export const SignUpForm = observer(() => {
+
+  useAuth('/home', 'auth')
 
   return (
     <form className={s.form}>

@@ -1,0 +1,31 @@
+@use '@styles' as *;
+
+.settings {
+  @include default;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 20px;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+  }
+}
+
+.value {
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    background: var(--color-background);
+    padding: 10px;
+    border-radius: 20px;
+  }
+}

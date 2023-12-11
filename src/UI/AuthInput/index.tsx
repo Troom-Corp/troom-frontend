@@ -1,3 +1,5 @@
+import { AuthWarnings } from './warnings'
+
 import s from './styles.module.scss'
 
 export interface AuthInputProps {
@@ -9,15 +11,11 @@ export interface AuthInputProps {
   onClick?: React.MouseEventHandler<HTMLInputElement>
 }
 
-export const UiInput: React.FC<AuthInputProps> = ({ type, value, placeholder, status, onChange, onClick }) => {
+export const AuthInput: React.FC<AuthInputProps> = ({ type, value, placeholder, status, onChange, onClick }) => {
   return (
     <>
       <input
-        className={`
-          ${type === 'submit' ? s.submit : s.input} 
-          ${status === 'success' ? s.input__success : ''} 
-          ${status === 'error' ? s.input__error : ''}
-        `}
+        className={type === 'submit' ? s.submit : s.input} 
         type={type}
         value={value}
         placeholder={placeholder}
@@ -25,6 +23,7 @@ export const UiInput: React.FC<AuthInputProps> = ({ type, value, placeholder, st
         onClick={onClick}
         readOnly={type === 'submit'}
       />
+      <AuthWarnings />
     </>
   )
 }

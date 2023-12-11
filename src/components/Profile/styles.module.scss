@@ -4,7 +4,22 @@
   @include default;
 }
 
-.info {
+.wrapper {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+//!=== TEMP ===!
+.buttons {
+  background-color: var(--color-background);
+  padding: 10px;
+  border-radius: 20px;
 }

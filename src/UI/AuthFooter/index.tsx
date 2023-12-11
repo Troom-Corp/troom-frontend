@@ -4,10 +4,13 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 import s from './styles.module.scss'
+import { authStore } from '@/store'
 
 export const AuthFooter = () => {
   const path = usePathname()
+  const data = authStore.data
 
+  
   return (
     <>
       <div className={s.underline}>

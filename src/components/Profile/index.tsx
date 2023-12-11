@@ -3,27 +3,42 @@
 import { observer } from 'mobx-react-lite'
 
 import { authStore } from '@/store'
-
+import mockAvatar from '@/assets/ava.jpg'
+ 
 import s from './styles.module.scss'
+import Image from 'next/image'
+import Link from 'next/link'
 
 interface ProfileProps {
-  params: string
+  login: string
 }
 
-export const Profile: React.FC<ProfileProps> = observer(({ params }) => {
+export const Profile: React.FC<ProfileProps> = observer(({ login }) => {
   
+  const user = authStore.user
+  const fullName = `${user.firstName} ${user.lastName}`
 
-  return (
-    <div className={s.profile}>
-      <div className={s.info}>
-        <p>{params}</p>
-        <p>{`${authStore.user.firstName}`}</p>
-        <p>Frontend dev</p>
-        <div className={s.avatar}>
+  if (login === user.login) {
+    return (
+      <div className={s.profile}>
+        <div className={s.wrapper}>
+          <Image className={s.avatar} src={mockAvatar} alt='avatar' />
+          <div>
+            <h1>{fullName}</h1>
+            <p>Фронтенд Разработчик</p>
+          </div>
+          <div className={s.buttons}>
+            <Link href='/settings'>Редактировать</Link>
+          </div>
         </div>
-        <p>Илья Марков</p>
-        <p>Илья Марков</p>
       </div>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <h1 className={s.profile}>Чужой профиль</h1>
+
+
+
+    )
+  }
 })

@@ -1,7 +1,8 @@
 import Image from "next/image"
 
-import { authStore, uiStore } from '@/store'
 import { Svg, UserDropDown } from "@/UI"
+import { UserCardLoader } from "./loader"
+import { authStore, uiStore } from '@/store'
 
 import s from './styles.module.scss'
 
@@ -11,9 +12,9 @@ export const UserCard = () => {
 
   return (
     <div className={s.user}>
-      {/* {!authStore.isAuth ?
-        <p>Загрузка...</p>
-        : */}
+      {!authStore.isAuth ?
+        <UserCardLoader />
+        :
         <>
           <Image src={'/ava.jpg'} alt='' width={50} height={50} />
           <div
@@ -24,7 +25,7 @@ export const UserCard = () => {
             <Svg icon='show-arrow' />
           </div>
         </>
-      {/* } */}
+      }
       <UserDropDown />
     </div>
   )

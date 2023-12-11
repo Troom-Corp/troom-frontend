@@ -10,3 +10,10 @@
     border-radius: 15px;
   }
 }
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}

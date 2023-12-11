@@ -5,8 +5,8 @@ async function ProfilePage({ params }: {params: { login: string } }) {
 
   return (
     <Container type='main'>
-      <Container type='content'>
-        <Profile params={params.login} />
+      <Container type='full'>
+        <Profile login={params.login} />
       </Container>
       <Container type='aside'>
         <p>Hello world</p> 

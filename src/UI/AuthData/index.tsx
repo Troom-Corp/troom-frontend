@@ -4,7 +4,7 @@ import { observer } from 'mobx-react-lite'
 import Link from 'next/link'
 
 import { authStore } from '@/store'
-import { UiInput } from '@/UI'
+import { AuthInput } from '@/UI'
 
 import s from './styles.module.scss'
 
@@ -15,50 +15,51 @@ interface AuthDataProps {
 export const AuthData: React.FC<AuthDataProps> = observer(({ type }) => {
   const data = authStore.data
 
-  if (type === 'signin') {
+  switch (type) {
+  case 'signin':
     return (
       <>
-        <UiInput
+        <AuthInput
           type='email'
           placeholder='Логин...'
           value={data.login}
           onChange={(e) => authStore.setData({ login: e.target.value })}
         />
-        <UiInput
+        <AuthInput
           type='password'
           placeholder='Пароль...'
           value={data.password}
           onChange={(e) => authStore.setData({ password: e.target.value })}
         />
-        <UiInput
+        <AuthInput
           type='button'
           value='Войти'
           onClick={() => authStore.signIn(data.login, data.password)}
         />
       </>
     )
-  } else if (type === 'first-signup') {
+    case 'first-signup':
     return (
       <>
-        <UiInput
+        <AuthInput
           type='text'
           placeholder='Логин...'
           value={data.login}
           onChange={(e) => authStore.setData({ login: e.target.value })}
         />
-        <UiInput
+        <AuthInput
           type='text'
           placeholder='Имя...'
           value={data.firstName}
           onChange={(e) => authStore.setData({ firstName: e.target.value })}
         />
-        <UiInput
+        <AuthInput
           type='text'
           placeholder='Фамилия...'
           value={data.lastName}
           onChange={(e) => authStore.setData({ lastName: e.target.value })}
         />
-        <UiInput
+        <AuthInput
           type='button'
           value='Продолжить'
           onClick={(e) => {
@@ -68,28 +69,28 @@ export const AuthData: React.FC<AuthDataProps> = observer(({ type }) => {
         />
       </>
     )
-  } else {
+    case 'second-signup': 
     return (
       <>
-        <UiInput
+        <AuthInput
           type='email'
           placeholder='Email...'
           value={data.email}
           onChange={(e) => authStore.setData({ email: e.target.value })}
         />
-        <UiInput
+        <AuthInput
           type='password'
           placeholder='Пароль...'
           value={data.password}
           onChange={(e) => authStore.setData({ password: e.target.value })}
         />
-        <UiInput
+        <AuthInput
           type='password'
           placeholder='Подтвердите пароль...'
           value={data.repeatPassword}
           onChange={(e) => authStore.setData({ repeatPassword: e.target.value })}
         />
-        <UiInput
+        <AuthInput
           type='button'
           value='Создать'
           onClick={() => authStore.signUp()}
@@ -106,5 +107,6 @@ export const AuthData: React.FC<AuthDataProps> = observer(({ type }) => {
         </Link>
       </>
     )
+    default: return null
   }
 })
